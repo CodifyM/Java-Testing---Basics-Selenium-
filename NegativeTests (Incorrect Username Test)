@@ -49,6 +49,9 @@ public class NegativeTests {
 //		enter username
 		WebElement username = driver.findElement(By.id("username"));
 		username.sendKeys("incorrectUsernameTest");
+//		It is a good practice to fail the cases intentionally so that you can verify that your cases are working correctly or not
+//		To do so uncomment below code with correct username:
+//		username.sendKeys("tomsmith");
 		sleep(1000);
 		/*
 		 * Here u can also use xpath for user name: WebElement username =
@@ -84,16 +87,11 @@ public class NegativeTests {
 		Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage),
 				"Actual error message does not contain expected.\n Actual: " + actualErrorMessage + "Expected: "
 						+ expectedErrorMessage);
-		
-		//close browser
+
+		// close browser
 		driver.quit();
 	}
 
-	
-	
-	
-	
-	
 	private void sleep(long n) {
 		try {
 			Thread.sleep(n);
