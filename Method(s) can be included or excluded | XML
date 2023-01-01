@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TestGroupSuite" verbose="1">
+
+
+	<test name="TestUsingGroups">
+		<classes>
+			<class name="com.herokuapp.theinternet.TestUsingGroups">
+				<methods>
+					<include name="incorrectPasswordTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+</suite>
